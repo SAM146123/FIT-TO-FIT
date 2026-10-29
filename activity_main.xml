@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="#101820"
     android:padding="16dp">
 
     <LinearLayout
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Header Title -->
+        <!-- Title Header -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,34 +22,29 @@
             android:gravity="center"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Celebration Animation Container -->
-        <com.airbnb.android.lottie.LottieAnimationView
-            android:id="@+id/lottieCelebration"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"/>
-
+        <!-- Celebration & Motivation -->
         <TextView
             android:id="@+id/tvMotivationMsg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="🎉 Welcome to FitToFit Version 2.0!"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textAlignment="center"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#1E2A38"
+            android:padding="12dp"
             android:layout_marginBottom="20dp"/>
 
-        <!-- Metrics Grid / Section -->
+        <!-- Health Metrics Section -->
         <TextView
-            android:id="@+id/tvMetricsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="📊 Daily Health & Fitness Status"
+            android:text="📊 Health & Fitness Metrics"
             android:textColor="#FFBB00"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/tvMetricsDetails"
@@ -57,20 +52,20 @@
             android:layout_height="wrap_content"
             android:textColor="#E0E0E0"
             android:textSize="14sp"
-            android:lineSpacingExtra="4dp"
-            android:background="#1E1E1E"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:lineSpacingExtra="5dp"
+            android:background="#1A2330"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp"/>
 
-        <!-- Friends List Section -->
+        <!-- Social & Competition Section -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="👥 Social Leaderboard & Competition"
+            android:text="👥 Social Competition (Max 500 Friends)"
             android:textColor="#00E5FF"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/tvFriendsStatus"
@@ -78,8 +73,8 @@
             android:layout_height="wrap_content"
             android:textColor="#E0E0E0"
             android:textSize="14sp"
-            android:background="#1E1E1E"
-            android:padding="12dp"/>
+            android:background="#1A2330"
+            android:padding="14dp"/>
 
     </LinearLayout>
 </ScrollView>

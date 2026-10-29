@@ -16,12 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
         metrics = new FitnessMetrics();
 
-        // Populate metrics UI
         TextView tvMetricsDetails = findViewById(R.id.tvMetricsDetails);
         TextView tvFriendsStatus = findViewById(R.id.tvFriendsStatus);
         TextView tvMotivationMsg = findViewById(R.id.tvMotivationMsg);
 
-        tvMotivationMsg.setText("🔥 Welcome back to FitToFit v2.0! Keep crushing your daily fitness goals!");
+        tvMotivationMsg.setText("🔥 Welcome Back to FitToFit v2.0! Keep Pushing Your Goals!");
 
         String metricsSummary = "🔥 Calories Burned: " + metrics.getCaloriesBurned() + " / " + metrics.getCalorieGoal() + " kcal\n" +
                 "❤️ Heart Rate: " + metrics.getHeartRate() + " bpm\n" +
@@ -34,15 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
         tvMetricsDetails.setText(metricsSummary);
 
-        // Add sample friends
         for (int i = 1; i <= 5; i++) {
             metrics.addFriend("FitnessPro_" + i);
         }
 
-        String friendsSummary = "Friends Count: " + metrics.getFriendCount() + " / 500 Max Friends\n" +
+        String friendsSummary = "Friends Connected: " + metrics.getFriendCount() + " / 500 Max Friends\n" +
                 "🏆 Leaderboard Rank: #1 among friends today!";
         tvFriendsStatus.setText(friendsSummary);
 
-        Toast.makeText(this, "FitToFit v2.0 UI Loaded Successfully!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "FitToFit v2.0 Dashboard Loaded Successfully!", Toast.LENGTH_LONG).show();
     }
 }

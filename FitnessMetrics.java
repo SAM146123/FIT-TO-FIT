@@ -15,7 +15,7 @@ public class FitnessMetrics {
     private int carbsGrams = 140;
     private double sleepHours = 7.8;
     private int stressScore = 20;
-    private String menstrualCycleStatus = "Regular - Day 14 (Ovulation)";
+    private String menstrualCycleStatus = "Regular - Day 14 (Ovulation Phase)";
     private List<String> friendList = new ArrayList<>();
     private static final int MAX_FRIENDS = 500;
 

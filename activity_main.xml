@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FitToFit v2.0 - Fitness Dashboard"
+            android:textColor="#00FF66"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Celebration Animation Container -->
+        <com.airbnb.android.lottie.LottieAnimationView
+            android:id="@+id/lottieCelebration"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:id="@+id/tvMotivationMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Metrics Grid / Section -->
+        <TextView
+            android:id="@+id/tvMetricsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Daily Health & Fitness Status"
+            android:textColor="#FFBB00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvMetricsDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E0E0E0"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:background="#1E1E1E"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Friends List Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Social Leaderboard & Competition"
+            android:textColor="#00E5FF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvFriendsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E0E0E0"
+            android:textSize="14sp"
+            android:background="#1E1E1E"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+</ScrollView>

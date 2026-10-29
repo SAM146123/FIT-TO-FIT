@@ -9,6 +9,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Unzip project
         run: unzip -q FitToFit-project.zip
+      - name: Use compileSdk 35
+        run: |
+          sed -i 's/compileSdk = 34/compileSdk = 35/' FitToFit/app/build.gradle.kts
+          echo "android.suppressUnsupportedCompileSdk=35" >> FitToFit/gradle.properties
       - uses: actions/setup-java@v4
         with:
           distribution: temurin

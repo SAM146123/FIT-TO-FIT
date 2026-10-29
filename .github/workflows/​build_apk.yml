@@ -1,0 +1,40 @@
+name: Build FitToFit APK v2.0
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.7
+
+      - name: Make Gradlew Executable
+        working-directory: FitToFit
+        run: chmod +x gradlew || true
+
+      - name: Build Debug APK v2.0
+        working-directory: FitToFit
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK Artifact v2.0
+        uses: actions/upload-artifact@v4
+        with:
+          name: FitToFit-v2.0-debug-apk
+          path: FitToFit/app/build/outputs/apk/debug/app-debug.apk
+          

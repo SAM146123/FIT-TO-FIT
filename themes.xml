@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.FitToFit" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#FAF3E7</item>
+        <item name="android:navigationBarColor">#FAF3E7</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

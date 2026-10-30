@@ -1,24 +1,26 @@
-# FitToFit - Fitness Tracker Project Zip
+# FIT TO FIT (Android)
 
-இந்த ZIP கோப்பில் நீங்கள் கேட்ட அனைத்து அம்சங்களுக்கும் ஏற்றவாறு கட்டமைக்கப்பட்ட ஆண்ட்ராய்டு புராஜெக்ட் கோப்புகள் அடங்கியுள்ளன.
+Kotlin + Jetpack Compose fitness app. UI follows the poster: Profile, Daily Activity ring,
+Weekly Progress bars, Workout card, Category tabs, Goal tracker, Achievements,
+Exercise cards, Heart-rate widget, bottom navigation.
 
-### சேர்க்கப்பட்டுள்ள அம்சங்கள் (Features Included):
-1. **Health Metrics Model (`FitnessMetrics.java`):**
-   - Calories, Heart Rate, BMI, Active Minutes
-   - Nutritional Value (Protein, Carbs, Fat)
-   - Sleep, Stress Tracking, Respiratory Rate
-   - Body Fat & Muscle Mass
-   - Women's Health & Menstrual Cycle Tracker
-   - Friends List (up to 500 friends limit feature)
-   
-2. **GitHub Actions Workflow (`.github/workflows/build_apk.yml`):**
-   - Automatically compiles APK on push.
-   - Set to `compileSdk = 35`, Java 17, and Gradle 8.7.
+## Run
+1. Android Studio (Koala or newer) -> Open -> select the `FitToFit` folder, let Gradle sync.
+2. Run on a real phone (Bluetooth does not work in the emulator), Android 8.0+ (minSdk 26).
 
-3. **Motivation & Celebration Features:**
-   - App Re-opening Congratulation Toast & Motivation popup handlers.
-   - Task completion celebration hooks configured with Lottie Animation library.
+## Smartwatch (Bluetooth)
+`BleHeartRateManager.kt` scans BLE devices and connects to the standard Heart Rate
+service (0x180D). Works with any watch/band that exposes live heart rate over BLE
+(turn on "heart rate broadcast / share heart rate" on the watch).
 
-### எவ்வாறு பயன்படுத்துவது (How to use):
-1. இந்த Zip கோப்பை எக்ஸ்ட்ராக்ட் (Unzip) செய்து உங்கள் GitHub Repository-ல் பதிவேற்றம் செய்யவும்.
-2. GitHub Actions தானாகவே இயங்கி உங்களுக்கு `app-debug.apk` ஃபைலை உருவாக்கிக் கொடுக்கும்.
+## Google Fit data
+Google is retiring the Google Fit Android API; the official replacement is Health Connect.
+`HealthConnectManager.kt` reads steps, distance, calories and heart rate from Health Connect,
+which Google Fit and most watch apps sync into. Install "Health Connect" on Android 13 or
+lower (built in on Android 14+), and in Google Fit enable sync to Health Connect.
+Tap "Tap to sync Google Fit data" in the app to grant permission.
+
+## Notes
+- Workout, badges and exercise cards are static sample content for now.
+- Before publishing on Play Store, Health Connect requires a privacy policy and a
+  permissions declaration form.

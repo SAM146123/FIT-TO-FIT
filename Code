@@ -1,0 +1,227 @@
+---
+name: FIT-TO-FIT
+colors:
+  surface: '#10131a'
+  surface-dim: '#10131a'
+  surface-bright: '#363940'
+  surface-container-lowest: '#0b0e14'
+  surface-container-low: '#191c22'
+  surface-container: '#1d2026'
+  surface-container-high: '#272a31'
+  surface-container-highest: '#32353c'
+  on-surface: '#e1e2eb'
+  on-surface-variant: '#bacbb7'
+  inverse-surface: '#e1e2eb'
+  inverse-on-surface: '#2e3037'
+  outline: '#859583'
+  outline-variant: '#3c4b3b'
+  surface-tint: '#0de462'
+  primary: '#6fff8b'
+  on-primary: '#003913'
+  primary-container: '#10e563'
+  on-primary-container: '#006025'
+  inverse-primary: '#006e2b'
+  secondary: '#d3fbff'
+  on-secondary: '#00363a'
+  secondary-container: '#00eefc'
+  on-secondary-container: '#00686f'
+  tertiary: '#ffdccf'
+  on-tertiary: '#5a1b00'
+  tertiary-container: '#ffb69b'
+  on-tertiary-container: '#943200'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#69ff88'
+  primary-fixed-dim: '#0de462'
+  on-primary-fixed: '#002108'
+  on-primary-fixed-variant: '#00531e'
+  secondary-fixed: '#7df4ff'
+  secondary-fixed-dim: '#00dbe9'
+  on-secondary-fixed: '#002022'
+  on-secondary-fixed-variant: '#004f54'
+  tertiary-fixed: '#ffdbce'
+  tertiary-fixed-dim: '#ffb59a'
+  on-tertiary-fixed: '#370e00'
+  on-tertiary-fixed-variant: '#802a00'
+  background: '#10131a'
+  on-background: '#e1e2eb'
+  surface-variant: '#32353c'
+typography:
+  display-lg:
+    fontFamily: Lexend
+    fontSize: 56px
+    fontWeight: '800'
+    lineHeight: 64px
+    letterSpacing: -0.03em
+  display-lg-mobile:
+    fontFamily: Lexend
+    fontSize: 40px
+    fontWeight: '800'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  headline-xl:
+    fontFamily: Lexend
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-xl-mobile:
+    fontFamily: Lexend
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Lexend
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 30px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Lexend
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: 0em
+  telemetry-numeral:
+    fontFamily: Lexend
+    fontSize: 48px
+    fontWeight: '800'
+    lineHeight: 48px
+    letterSpacing: -0.04em
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 17px
+    fontWeight: '500'
+    lineHeight: 26px
+    letterSpacing: -0.01em
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 22px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 18px
+    letterSpacing: 0.01em
+  label-lg:
+    fontFamily: Lexend
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 18px
+    letterSpacing: 0.04em
+  label-md:
+    fontFamily: Lexend
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.06em
+  label-sm:
+    fontFamily: Lexend
+    fontSize: 10px
+    fontWeight: '700'
+    lineHeight: 12px
+    letterSpacing: 0.08em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-tablet: 1.5rem
+  gutter-desktop: 2rem
+  margin: 1rem
+  margin-tablet: 2rem
+  margin-desktop: 3rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system establishes an ultra-responsive, athletic telemetry environment tailored for high-output physical tracking and multi-device telemetry synchronization. The aesthetic pairs the ruthless efficiency of high-performance sports analytics with the refined tactile depth of luminous dark interfaces. It communicates velocity, precision, and relentless personal progress.
+
+The style unites **Tactile Glassmorphism** with **High-Contrast Athletic Minimal**. Deep obsidian and muted slate surfaces recede into the backdrop, allowing high-visibility electric accents to project critical biometric milestones, live cadences, and exertion zones. Optical treatments utilize subtle backdrop blurs, controlled luminescence, and laser-precise strokes to simulate premium instrument dashboards. Motion is purposeful, punchy, and kinetic, ensuring instant readability whether glancing at a phone secured to a spin bike or a watch display during a sprint. Bilingual typography guarantees equivalent visual mass, cadence, and energetic authority across English and Tamil script environments.
+
+## Colors
+
+The palette is engineered for maximum optical legibility against variable outdoor and low-light training conditions:
+
+- **Primary (`#10E563` - Electric Neon Green):** Represents optimal performance, active tracking state, completion, and peak recovery zones. Used for primary CTAs, active telemetry progress arcs, and critical success validations.
+- **Secondary (`#00F0FF` - Kinetic Cyan):** Represents biometric connection, pace metrics, smartwatch sync, and structural telemetry layers. Used for secondary graphs, active state indicators, and navigational highlights.
+- **Tertiary (`#FF5C00` - High-Output Orange):** Reserved for high heart-rate zones, anaerobic strain thresholds, urgent alerts, and peak performance milestones.
+- **Neutral Foundation (`#0B0E14` - Deep Obsidian):** Forms the foundational floor. Paired with layered canvas tones (`#121721` Surface Low, `#1B2232` Surface Base, and `#263045` Surface Raised) to establish depth without sacrificing true black levels on OLED panels.
+- **Text & Content Tiers:** On-Surface High (`#F4F7FC`, 95% opacity), On-Surface Mid (`#9AA5BC`, 70% opacity), and On-Surface Low (`#505A70`, 40% opacity).
+
+## Typography
+
+The typographic hierarchy prioritizes instantaneous data extraction during dynamic movement. `Lexend` delivers clear geometric tracking and wide optical counters for quantitative counters, workout stats, and section headers. `Plus Jakarta Sans` delivers warm, readable text for workout descriptions, nutrition logs, and coaching tips.
+
+### Bilingual Handling (English / Tamil)
+- For Tamil glyph rendering, retain identical line-height metrics while increasing standard label tracking slightly to account for complex loop forms and diacritics.
+- Pair English numeric readings directly with Tamil contextual labels without changing font-size tiers. The visual weight of `Lexend` at 600 weight matches standard Tamil unicode typography at 500-600 weight.
+- Never force uppercase transformations on mixed English/Tamil layouts; apply explicit font weights instead to indicate priority.
+
+## Layout & Spacing
+
+The layout model utilizes a fluid 4-column structure on mobile devices (under 600px), transitioning to an 8-column layout on tablets (600px - 1023px), and a 12-column layout on web/desktop telemetry hubs (1024px+).
+
+- **Mobile Viewports:** Designed for one-handed reachability during physical training. The primary touch zones are anchored to the bottom 45% of the viewport. Outer margin is locked at `1rem`, preventing edge clipping while maximizing horizontal space for telemetry cards.
+- **Rhythm & Grid:** All horizontal and vertical distributions follow a strict 4px/8px modular cadence. Touch targets maintain a minimum dimension of `48px x 48px` to guarantee zero-miss interactions while in motion.
+- **Telemetry Dashboards:** Telemetry dials and multi-metric rings span the full width within margins, maintaining an aspect ratio that prevents vertical viewport pushing.
+
+## Elevation & Depth
+
+Depth is established via **Translucent Glass Strata** rather than heavy drop shadows, preserving an airy, modern athletic display aesthetic:
+
+- **Level 0 (Floor):** True Obsidian (`#0B0E14`), uniform and non-reflective.
+- **Level 1 (Sub-surface):** Semi-opaque slate (`#121721` with 80% opacity), featuring `backdrop-filter: blur(16px)` and a subtle `1px` inner stroke (`#FFFFFF` at 6% opacity).
+- **Level 2 (Active Cards & Panels):** High-depth frosted obsidian (`#1B2232` at 65% opacity), `backdrop-filter: blur(24px)`, framed with a crisp boundary outline (`#FFFFFF` at 12% opacity).
+- **Level 3 (Modal / Floating Overlays):** Highly reactive surface (`#263045` at 85% opacity), accompanied by an ambient, diffused neon back-glow: `0 8px 32px -4px rgba(16, 229, 99, 0.12)`.
+- **Telemetry Projection:** Active rings and pulse indicators project a soft, atmospheric light footprint: `box-shadow: 0 0 16px rgba(16, 229, 99, 0.35)`.
+
+## Shapes
+
+The design system adopts a **Rounded (`2`)** baseline geometry, striking a balance between technical discipline and approachable modern ergonomics:
+
+- **Standard Containers & Cards:** `0.5rem` (8px) on inner nested cards; `1rem` (16px) on primary exterior surface panels.
+- **Floating Controls & Action Sheets:** `1.5rem` (24px) for upper corners of bottom sheets and large modular dashboards.
+- **Buttons, Badges, & Status Pills:** Fully rounded capsule/pill contours (`9999px`) are reserved exclusively for interactive triggers, filter chips, and real-time state flags to visually distinct them from static structural layout grids.
+
+## Components
+
+### Buttons
+- **Primary Action (Active State):** High-voltage background (`#10E563`) with dark obsidian text (`#0B0E14`). Pill-shaped contour, font weight 700. Pressed state transitions to an energetic scale (`0.98`) with a matching neon green perimeter ring.
+- **Secondary Action:** Glassmorphism base (`#1B2232` at 60% opacity) with a `1px` border of `#00F0FF` (at 40% opacity) and glowing cyan text.
+- **Ghost/Tertiary:** No background, high-contrast white text, active state emits an orange glow under-layer.
+
+### Telemetry Rings & Biometric Dials
+- Circular gauges built with an unfulfilled track base (`#263045` at 50% opacity) and an illuminated stroke cap using `#10E563`, `#00F0FF`, or `#FF5C00`.
+- Concentric three-ring assemblies feature a 4px gap separation with center-weighted numerical telemetry in `Lexend` heavy weights.
+
+### Glassmorphic Cards
+- Multi-metric cards utilize frosted backing, rounded 16px corners, and dual-tone content headers (bilingual title pairing).
+- High-intensity metric readouts are pinned to the bottom left, balanced by mini sparkline graphs on the bottom right.
+
+### Chips & Metrics Filters
+- Capsule pills with standard `0.5rem` spacing.
+- Selected state features a luminous fill (`#00F0FF` with 15% opacity), a solid cyan boundary, and high-visibility text. Unselected state sits at 30% slate opacity with low-contrast borders.
+
+### Inputs & Sliders
+- Input fields use sunken obsidian backings (`#07090D`) with a 1px border (`#263045`). On focus, the border dynamically transitions to neon lime with an outer glow.
+- Sliders feature a tactile 24px pill handle with high-visibility neon accent tracks and segmented haptic tick marks.
+
+### Checkboxes & Segmented Toggles
+- Custom squared-radius toggles (`6px`) with an animated fill stroke. Checkmarks light up with neon green upon completion.
+- Multi-state toggles (e.g., metric switching between Imperial/Metric or English/Tamil) use a smooth slide capsule pill mechanism with glass backing.

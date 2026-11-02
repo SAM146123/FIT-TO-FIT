@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "688535107053",
+    "project_id": "fit-to-fit-c2609",
+    "storage_bucket": "fit-to-fit-c2609.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688535107053:android:f0f23ba240755a3ac7e3e4",
+        "android_client_info": {
+          "package_name": "com.fittofit.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688535107053-lrevrbqbe99k6isqvnbtptn1ve0hmbb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fittofit.app",
+            "certificate_hash": "a551d991a1aaa18993a93130249d2bbdbd82eb8a"
+          }
+        },
+        {
+          "client_id": "688535107053-8e3ngo8bosqs5r3o2ebb8512eqp8g6h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1CNwC4Vyu1S7FjGVYNKO7E0OFQ-YmvkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688535107053-8e3ngo8bosqs5r3o2ebb8512eqp8g6h5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

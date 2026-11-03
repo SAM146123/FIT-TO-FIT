@@ -21,10 +21,10 @@ jobs:
           F=$(find . -name settings.gradle.kts -not -path "./_unzipped/*" | head -1)
           if [ -z "$F" ]; then F=$(find . -name settings.gradle.kts | head -1); fi
           echo "dir=$(dirname "$F")" >> "$GITHUB_OUTPUT"
-          - name: Use google-services.json
+      - name: Use google-services.json
         run: |
-          if [ -f google-services.json ] && python3 -c "import json;json.load(open('google-services.json'))"; then cp google-services.json "${{ steps.find.outputs.dir }}/app/google-services.json"; else echo "google-services.json is missing or invalid, using the one inside the zip"; fi
-       - name: Build
+          if [ -f google-services.json ] && python3 -c "import json;json.load(open('google-services.json'))"; then cp google-services.json "${{ steps.find.outputs.dir }}/app/google-services.json"; else echo "google-services.json is missing or invalid"; fi
+      - name: Build
         working-directory: ${{ steps.find.outputs.dir }}
         run: gradle assembleDebug --no-daemon --stacktrace
       - uses: actions/upload-artifact@v4

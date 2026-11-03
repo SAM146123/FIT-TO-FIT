@@ -1,0 +1,3 @@
+- name: Use uploaded google-services.json
+        run: |
+          if [ -f google-services.json ]; then cp google-services.json "${{ steps.find.outputs.dir }}/app/google-services.json"; fi

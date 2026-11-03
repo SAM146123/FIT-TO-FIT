@@ -7,26 +7,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Unzip project
-        run: unzip -q FitToFit-project.zip
-        - name: Use google-services.json
-        run: |
-          if [ -f google-services.json ]; then cp google-services.json FitToFit/app/google-services.json; fi
-      - name: Use compileSdk 35
-        run: |
-          sed -i 's/compileSdk = 34/compileSdk = 35/' FitToFit/app/build.gradle.kts
-          echo "android.suppressUnsupportedCompileSdk=35" >> FitToFit/gradle.properties
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 8.7
+          gradle-version: 8.9
+      - name: Find project folder
+        id: find
+        run: |
+          if [ -f FitToFit-project.zip ]; then unzip -oq FitToFit-project.zip -d _unzipped; fi
+          F=$(find . -name settings.gradle.kts -not -path "./_unzipped/*" | head -1)
+          if [ -z "$F" ]; then F=$(find . -name settings.gradle.kts | head -1); fi
+          echo "dir=$(dirname "$F")" >> "$GITHUB_OUTPUT"
+      - name: Use google-services.json
+        run: |
+          if [ -f google-services.json ]; then cp google-services.json "${{ steps.find.outputs.dir }}/app/google-services.json"; fi
       - name: Build
-        working-directory: FitToFit
-        run: gradle assembleDebug --no-daemon
+        working-directory: ${{ steps.find.outputs.dir }}
+        run: gradle assembleDebug --no-daemon --stacktrace
       - uses: actions/upload-artifact@v4
         with:
           name: FitToFit-apk
-          path: FitToFit/app/build/outputs/apk/debug/app-debug.apk
+          path: "**/build/outputs/apk/debug/*.apk"

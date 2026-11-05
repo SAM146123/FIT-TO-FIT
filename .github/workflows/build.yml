@@ -1,33 +1,73 @@
 name: Build APK
+
 on:
   push:
+    branches: [ main ]
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
+
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 8.9
+          gradle-version: '8.9'
+
       - name: Find project folder
-        id: find
+        id: proj
         run: |
-          if [ -f FitToFit-project.zip ]; then unzip -oq FitToFit-project.zip -d _unzipped; fi
-          F=$(find . -name settings.gradle.kts -not -path "./_unzipped/*" | head -1)
-          if [ -z "$F" ]; then F=$(find . -name settings.gradle.kts | head -1); fi
-          echo "dir=$(dirname "$F")" >> "$GITHUB_OUTPUT"
+          if [ -f FitToFit-project.zip ]; then
+            mkdir -p _unzipped
+            unzip -q -o FitToFit-project.zip -d _unzipped
+          fi
+          if [ -d _unzipped ]; then
+            SETTINGS=$(find _unzipped -name settings.gradle.kts | head -n 1)
+          else
+            SETTINGS=$(find . -name settings.gradle.kts | head -n 1)
+          fi
+          DIR=$(dirname "$SETTINGS")
+          echo "Project folder: $DIR"
+          echo "dir=$DIR" >> "$GITHUB_OUTPUT"
+
       - name: Use google-services.json
         run: |
-          if [ -f google-services.json ] && python3 -c "import json;json.load(open('google-services.json'))"; then cp google-services.json "${{ steps.find.outputs.dir }}/app/google-services.json"; else echo "google-services.json is missing or invalid"; fi
+          if [ -f google-services.json ] && python3 -c "import json;json.load(open('google-services.json'))" 2>/dev/null; then
+            cp google-services.json "${{ steps.proj.outputs.dir }}/app/google-services.json"
+            echo "Using google-services.json"
+          else
+            echo "No valid google-services.json, skipping"
+          fi
+
       - name: Build
-        working-directory: ${{ steps.find.outputs.dir }}
+        working-directory: ${{ steps.proj.outputs.dir }}
         run: gradle assembleDebug --no-daemon --stacktrace
+
+      - name: Name the APK
+        run: |
+          APK=$(find . -path "*build/outputs/apk/debug/*.apk" | head -n 1)
+          echo "APK: $APK"
+          cp "$APK" FitToFit.apk
+
       - uses: actions/upload-artifact@v4
         with:
           name: FitToFit-apk
-          path: "**/build/outputs/apk/debug/*.apk"
+          path: FitToFit.apk
+
+      - name: Publish the APK to the Release page
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: FIT TO FIT - latest APK
+          body: "Download FitToFit.apk, tap it and install. Allow notifications when asked."
+          files: FitToFit.apk
+          make_latest: true
